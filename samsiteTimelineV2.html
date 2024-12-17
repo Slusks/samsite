@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap 5 Layout</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .card-content {
+            max-height: 100px;
+            overflow: hidden;
+            transition: max-height 1s ease-in-out;
+        }
+        .card.expanded .card-content {
+            max-height: 800px;
+        }
+        .fab-btn {
+            position: relative;
+            margin-top: 1rem;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #0d6efd;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            font-size: 1.5rem;
+            line-height: 1;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        .fab-btn:hover {
+            background-color: #0b5ed7;
+        }
+        .timeline {
+            position: absolute;
+            top: 0;
+            left: 100%;
+            width: 4px;
+            height: 100%;
+            background-color: #0d6efd;
+        }
+        .timeline .year-box {
+            position: absolute;
+            left: 1rem;
+            transform: translateX(50%);
+            background-color: #f8f9fa;
+            color: #0d6efd;
+            padding: 0.5rem 1rem;
+            border: 1px solid #0d6efd;
+            border-radius: 0.25rem;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .timeline .year-box:nth-child(1) { top: 10%; }
+        .timeline .year-box:nth-child(2) { top: 35%; }
+        .timeline .year-box:nth-child(3) { top: 60%; }
+        .timeline .year-box:nth-child(4) { top: 85%; }
+        .card-wrapper {
+            position: relative;
+            display: flex;
+            margin-right: 50px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Samsite: Digital Highlights</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container mt-4 left" style="max-width: 70%;">
+        <div class="row">
+            <!-- Timeline -->
+            <div class="col-md-10">
+                <!-- Panel 1 -->
+                <div class="card-wrapper">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title">September 2024</h5>
+                            <div class="card-content">
+                                <h2>FlightSense Contract - Time and Materials Investigation</h2>
+                                <p>Analyzed shop data including material replacement rates and costs associated with high volume components in order to determine main drivers for 
+                                the American Airlines flight sense contract. Presented findings to executive leadership and provided action items to reduce costs over the next calendar year.
+                                Led execution of engineering tasks for cost reduction on contract for Q4 2024 into 2025. </p>
+                            </div>
+                            <button class="fab-btn toggle-btn">+</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Panel 2 -->
+                <div class="card-wrapper">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title">May 2024</h5>
+                            <div class="card-content">
+                                <h2>Trimmable Horizontal Stabilizer Life Limited Investigation</h2>
+                                <p>Subject Matter expert for THSA life limit review. Provided executive leadership with details regarding FAA and EASA requirements in terms of 
+                                existing FAA Airworthiness Directives and Service bulletins. Implemented corrective actions to satisfy FAA requirements.</p>
+                            </div>
+                            <button class="fab-btn toggle-btn">+</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Panel 3 -->
+                <div class="card-wrapper">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title">Panel 3</h5>
+                            <div class="card-content">
+                                <h2>This is a short preview of the panel content.</h2>
+                                <p>This is additional hidden content that becomes visible when the card expands. It can contain detailed information, explanations, or any other content you'd like to reveal.</p>
+                            </div>
+                            <button class="fab-btn toggle-btn">+</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Panel 4 -->
+                <div class="card-wrapper">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title">Panel 4</h5>
+                            <div class="card-content">
+                                <h2>This is a short preview of the panel content.</h2>
+                                <p>This is additional hidden content that becomes visible when the card expands. It can contain detailed information, explanations, or any other content you'd like to reveal.</p>
+                            </div>
+                            <button class="fab-btn toggle-btn">+</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Timeline Column -->
+            <div class="col-md-2 position-relative">
+                <div class="timeline">
+                    <div class="year-box">2024</div>
+                    <div class="year-box">2024</div>
+                    <div class="year-box">2023</div>
+                    <div class="year-box">2023</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light text-center py-3 mt-4">
+        <p class="mb-0">&copy; 2024 My Website. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.querySelectorAll('.toggle-btn').forEach(button => {
+            button.addEventListener('click', () => {
+                const card = button.closest('.card');
+                card.classList.toggle('expanded');
+                button.textContent = card.classList.contains('expanded') ? '-' : '+';
+            });
+        });
+    </script>
+</body>
+</html>
