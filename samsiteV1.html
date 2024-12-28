@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="samsiteStyle.css"> 
+</head>
+<body>
+    <div class="header">
+        <!--<a href="#default" class="logo">Samsite: Career Timeline</a>-->
+        <div class="header-left">
+          <a href="#home">Samsite: Career Timeline</a>
+        </div>
+        <div class="header-right">
+          <a href="#contact">Contact</a>
+          <a href="#about">About</a>
+        </div>
+      </div> 
+<div class="introduction">
+    <!--<h1> Welcome to Samsite.io</h1>-->
+    <p>Samsite.io is an online resume, providing key insights into my career. Alongside my career, I have found
+        a love for web development and data analytics and communication. Complimenting some of my carrer highlights
+        are links to the websites I have created over the years.
+    </p>
+</div>
+<div class="timeline">
+  <div class="container left">
+    <div class="content">
+      <h2>May 2024</h2>
+      <h3>Trimmable Horizontal Stabilizer Actuator Life Limit Review</h3>
+      <p>Subject Matter expert for THSA life limit review. Provided executive leadership with details regarding FAA and EASA requirements in terms of 
+        existing FAA Airworthiness Directives and Service bulletins. Implemented corrective actions to satisfy FAA requirements.
+      </p>
+      <span class="date-label">May 2024</span>
+    </div>
+  </div>
+  <div class="container right">
+    <div class="content">
+      <h2>2017</h2>
+      <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
+    </div>
+  </div>
+  <div class="container left">
+    <div class="content">
+      <h2>2016</h2>
+      <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
+    </div>
+  </div>
+  <div class="container right">
+    <div class="content">
+      <h2>2015</h2>
+      <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
+    </div>
+  </div>
+  <div class="container left">
+    <div class="content">
+      <h2>2014</h2>
+      <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
+    </div>
+  </div>
+  <div class="container right">
+    <div class="content">
+      <h2>2013</h2>
+      <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
+    </div>
+  </div>
+</div>
+<div class="spacer"></div>
+</div>
+
+<footer>&copy; 2024 Interactive Timeline. All rights reserved.</footer>
+
+<script>
+    const cards = document.querySelectorAll('.card');
+
+    cards.forEach(card => {
+        card.addEventListener('click', () => {
+            cards.forEach(c => c.classList.remove('active'));
+            card.classList.add('active');
+        });
+    });
+</script>
+</body>
+</html>
