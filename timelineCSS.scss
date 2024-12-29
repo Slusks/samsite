@@ -72,4 +72,122 @@
 }
 
 
+.card-content {
+    max-height: 100px;
+    overflow: hidden;
+    transition: max-height 1s ease-in-out;
+}
 
+.card-img-top {
+    max-width: 100%;
+    height: auto;
+    max-height: 200px;
+    object-fit: cover;
+    object-position: top;
+}
+.card.expanded .card-content {
+    max-height: 1000px;
+}
+.hidden-paragraph {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 1s ease-in-out;
+}
+.card.expanded .hidden-paragraph {
+    max-height: 300px; /* Adjust based on your expected content size */
+}
+
+.fab-btn {
+    position: relative;
+    margin-top: 1rem;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0d6efd;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    line-height: 1;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+.fab-btn:hover {
+    background-color: #0b5ed7;
+}
+.card-wrapper {
+    margin-bottom: 2rem;
+}
+.view-site-btn {
+    display: none;
+    margin-top: 1rem;
+}
+.card.expanded .view-site-btn {
+    display: block;
+}
+
+
+.card-content {
+    max-height: 100px;
+    overflow: hidden;
+    transition: max-height 1s ease-in-out;
+}
+
+.card.expanded .card-content {
+    max-height: 1000px;
+    transition: max-height 1s ease-in-out;
+}
+
+.hidden-paragraph {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 1s ease-in-out;
+}
+
+.card.expanded .hidden-paragraph {
+    max-height: 300px; /* Adjust based on your expected content size */
+}
+
+.fab-btn {
+    position: relative;
+    margin-top: 1rem;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0d6efd;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    line-height: 1;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.fab-btn:hover {
+    background-color: #0b5ed7;
+}
+
+.card-wrapper {
+    margin-bottom: 2rem;
+}
+
+.view-site-btn {
+    display: none;
+    margin-top: 1rem;
+}
+
+.card.expanded .view-site-btn {
+    display: block;
+}
+
+.card-img-top {
+    object-fit: cover;
+    object-position: top; /* Ensures the image is aligned to the top */
+    max-height: 200px; /* Optional: Limit the height of the image */
+    width: 100%; /* Ensures the image fits the card width */
+}
