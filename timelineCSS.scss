@@ -158,6 +158,11 @@ a.nav-link {
     object-position: top;
 }
 
+#sendMessage {
+    background-color:var(--primary-color);
+    color: whitesmoke;
+}
+
 @media (max-width: 760px) {
     html {
         scrollbar-gutter: auto;
@@ -173,3 +178,4 @@ a.nav-link {
         margin-left: 2%;
     }
 }
+
