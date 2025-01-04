@@ -1,0 +1,10 @@
+{
+  "hosting": {
+    "public": "samsite",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}
