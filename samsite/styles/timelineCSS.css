@@ -97,7 +97,7 @@ a.nav-link {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--accent-colorBright);
+  background-color: var(--primary-color);
   color: var(--Text-dark);
   border: none;
   cursor: pointer;
