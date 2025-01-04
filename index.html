@@ -11,19 +11,19 @@
 </head>
 <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#"><i class="fa-sharp fa-solid fa-chart-pie fa-lg"></i><span>     </span>Samsite.io</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid" style="color:white">
+            <a class="navbar-brand" href="#"><i class="fa-sharp fa-solid fa-chart-pie fa-lg" style="color:white"></i><span>     </span>Samsite.io</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" >
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
+            <div class="collapse navbar-collapse" id="navbarNav" >
+                <ul class="navbar-nav ms-auto" >
+                    <!--<li class="nav-item" >
+                        <a class="nav-link" href="#" >Resume</a>
+                    </li>-->
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Resume</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="samsiteProgramming.html">Programming</a>
+                        <a class="nav-link" href="samsiteProgramming.html">Programming</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="samsiteContact.html">Contact</a>
@@ -32,6 +32,7 @@
             </div>
         </div>
     </nav>
+    <!-- Navbar -->
     <div class ="container-intro">
         <p> My name is Sam Slusky, welcome to my website.</p>
         
@@ -188,7 +189,7 @@
     </div>
 
     <!-- Footer -->
-    <footer class="bg-dark text-light text-center py-3 mt-4">
+    <footer class="text-light text-center py-3 mt-4">
         <p class="mb-0">&copy; 2024 Samsite.io</p>
         <p class="mb-0">E-mail: contact.samsite | Github: https://github.com/Slusks | https://www.linkedin.com/in/sslusky/</p>
     </footer>
@@ -205,6 +206,8 @@ document.querySelectorAll('.toggle-btn').forEach(button => {
             : '<i class="fa-regular fa-circle-down"></i>';
     });
 });
+
+
     </script>
 </body>
 </html>

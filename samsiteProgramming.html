@@ -9,21 +9,21 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/0eb52c428d.js" crossorigin="anonymous"></script>
     <style>
-        .card-content {
-            max-height: 100px;
-            overflow: hidden;
-            transition: max-height 1s ease-in-out;
-        }
-
+        :root {
+    --primary-color: hsl(9,98%,24%);
+    --primary-color2: hsl(204,98%,24%); /* Default: Professional blue */
+    --secondary-color: hsl(0, 0%, 90%); /* Default: Neutral light gray */
+    --accent-colorBright: hsl(9, 100%, 41%); /* Default: Vibrant red */
+    --accent-colorDark: hsl(9, 100%, 12%);
+    --Text-Light: hsl(0,0,100);
+    --Text-dark: hsl(100,100%,0);
+  }
         .card-img-top {
             max-width: 100%;
             height: auto;
             max-height: 200px;
             object-fit: cover;
             object-position: top;
-        }
-        .card.expanded .card-content {
-            max-height: 1000px;
         }
         .hidden-paragraph {
             max-height: 0;
@@ -34,29 +34,7 @@
             max-height: 300px; /* Adjust based on your expected content size */
         }
 
-        .fab-btn {
-            position: relative;
-            margin-top: 1rem;
-            border-radius: 50%;
-            width: 50px;
-            height: 50px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: #0d6efd;
-            color: #fff;
-            border: none;
-            cursor: pointer;
-            font-size: 1.5rem;
-            line-height: 1;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-        }
-        .fab-btn:hover {
-            background-color: #0b5ed7;
-        }
-        .card-wrapper {
-            margin-bottom: 2rem;
-        }
+
         .view-site-btn {
             display: none;
             margin-top: 1rem;
@@ -64,31 +42,53 @@
         .card.expanded .view-site-btn {
             display: block;
         }
+
+        .card {
+            min-height: 400px;
+        }
+
+        .card-content {
+            min-height: 80px;
+        }
+
+        button.btn.toggle-btn {
+            background-color:var(--primary-color);
+            color:whitesmoke;
+
+        }
+
+        .btn.view-site-btn {
+            background-color: var(--primary-color2);
+            color:whitesmoke;
+        }
+
+
     </style>
 </head>
 <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="index.html"><i class="fa-sharp fa-solid fa-chart-pie fa-lg"></i><span>     </span>Samsite.io</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid" style="color:white">
+            <a class="navbar-brand" href="index.html"><i class="fa-sharp fa-solid fa-chart-pie fa-lg" style="color:white"></i><span>     </span>Samsite.io</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" >
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
+            <div class="collapse navbar-collapse" id="navbarNav" >
+                <ul class="navbar-nav ms-auto" >
+                    <!--<li class="nav-item" >
+                        <a class="nav-link" href="#" >Resume</a>
+                    </li>-->
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Resume</a>
+                        <a class="nav-link" href="samsiteProgramming.html">Programming</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="#">Programming</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Contact</a>
+                        <a class="nav-link" href="samsiteContact.html">Contact</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
+    <!-- Navbar -->
 
     <!-- Main Content -->
     <div class ="container-intro">
@@ -117,13 +117,13 @@
                         <div class="card-content">
                             <p>Wesbsite I built as part of a challenge on a message board for a trading card game.</p>
                         </div>
-                        <button class="btn btn-primary toggle-btn">Read More</button>
+                        <button class="btn toggle-btn">Read More</button>
                         <ul class="hidden-paragraph">
                                 <li>To build this site, I collected, aggregated, and cleaned data pulled from an API using Python.</li>
                                 <li>I then built the front end using Flask, a python library for integrating python with typical front end Javascript/HTML/CSS</li>
                                 <li>The site is hosted on Vercel, a cloud platform providing hosting solutions for dynamic websites and web applications.</li>
                         </ul>
-                        <a href="doomblademtg.com" class="btn btn-success view-site-btn" target="_blank">Visit Site</a>
+                        <a href="doomblademtg.com" class="btn view-site-btn" target="_blank">Visit Site</a>
                     </div>
                 </div>
             </div>
@@ -136,14 +136,14 @@
                         <div class="card-content">
                             <p>WebApp for Engineers to log cross-training time</p>
                         </div>
-                        <button class="btn btn-primary toggle-btn">Read More</button>
+                        <button class="btn toggle-btn">Read More</button>
                         <ul class="hidden-paragraph">
                             <li>Utilized Flask, a python library for bridging python with typical front end web development code</li>
                             <li>Converted to local application so it could be run only with local network access (not currently online)</li>
                             <li>Detected user info and provided simple form for user input</li>
                             <li>Tabulated data by date, shop, or engineer, in an easily readable or downloaded format</li>
                         </ul>
-                        <a href="#" class="btn btn-success view-site-btn" target="_blank">No Demo Available</a>
+                        <a href="#" class="btn view-site-btn" target="_blank">No Demo Available</a>
                     </div>
                 </div>
             </div>
@@ -156,7 +156,7 @@
                         <div class="card-content">
                             <p>Web Scraping and Data Analytics website centering around professional video games</p>
                         </div>
-                        <button class="btn btn-primary toggle-btn">Read More</button>
+                        <button class="btn toggle-btn">Read More</button>
                         <ul class="hidden-paragraph">
                             <li>Developed for the purposes of growing my data analytics and communication skills</li>
                             <li>Features Tableau data from SQL Database</li>
@@ -164,7 +164,7 @@
                             <li>Built using Angular Web Framework</li>
                             <li>Hosted on Google Firebase</li>
                         </ul>
-                        <a href="statcheck-samsite.com" class="btn btn-success view-site-btn" target="_blank">Visit Site</a>
+                        <a href="statcheck-samsite.com" class="btn  view-site-btn" target="_blank">Visit Site</a>
                     </div>
                 </div>
             </div>
@@ -177,7 +177,7 @@
                         <div class="card-content">
                             <p>First Web development project for skill growth, based around Dungeons & Dragons TTRPG</p>
                         </div>
-                        <button class="btn btn-primary toggle-btn">Read More</button>
+                        <button class="btn toggle-btn">Read More</button>
                         <ul class="hidden-paragraph">
                             <li>First web development project</li>
                             <li>Exploration of skills like back end data management and persisting user data across states</li>
@@ -186,14 +186,14 @@
                             <li>Built on the Angular Web framework</li>
                             <li>Hosted on Google Firebase</li>
                         </ul>
-                        <a href="dnd.samsite.io" class="btn btn-success view-site-btn" target="_blank">Visit Site</a>
+                        <a href="dnd.samsite.io" class="btn view-site-btn" target="_blank">Visit Site</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <!-- Footer -->
-    <footer class="bg-dark text-light text-center py-3 mt-4">
+    <footer class="text-light text-center py-3 mt-4">
         <p class="mb-0">&copy; 2024 Samsite.io</p>
         <p class="mb-0">E-mail: contact.samsite | Github: https://github.com/Slusks | https://www.linkedin.com/in/sslusky/</p>
     </footer>
@@ -208,6 +208,8 @@
                 button.textContent = card.classList.contains('expanded') ? 'Read Less' : 'Read More';
             });
         });
+
+        
     </script>
 </body>
 </html>

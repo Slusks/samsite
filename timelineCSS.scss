@@ -1,22 +1,93 @@
-.container-intro {
-    padding: 3%;
+:root {
+    --primary-color: hsl(9,98%,24%);
+    --primary-color2: hsl(204,98%,24%);
+    --secondary-color: hsl(0, 0%, 90%);
+    --accent-colorBright: hsl(9, 100%, 41%);
+    --accent-colorDark: hsl(9, 100%, 12%);
+    --Text-Light: hsl(0, 0%, 100%);
+    --Text-dark: hsl(100, 100%, 0%);
 }
 
+html {
+    height: 100%;
+    overflow-y: scroll;
+    scrollbar-gutter: stable;
+}
+
+body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    flex: 1;
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.navbar {
+    background-color: var(--primary-color);
+    color: var(--Text-Light);
+}
+
+.navbar-brand, 
+a.navbar-brand, 
+a.nav-link {
+    color: var(--Text-Light);
+}
+
+.container-intro {
+    padding: 3%;
+    background-color: var(--secondary-color);
+}
 
 .container.mt-4.left {
     margin-left: 8%;
     max-width: 70%;
 }
 
+.card {
+    flex: 0 0 85%;
+    box-shadow: 5px 5px 5px rgb(21, 21, 21);
+    transform: scale(1);
+    transition: transform 0.5s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
 .card-content {
     max-height: 100px;
     overflow: hidden;
     transition: max-height 1s ease-in-out;
+    will-change: max-height;
 }
+
 .card.expanded .card-content {
     max-height: 1000px;
+}
+
+.hidden-paragraph {
+    max-height: 0;
+    overflow: hidden;
     transition: max-height 1s ease-in-out;
 }
+
+.card.expanded .hidden-paragraph {
+    max-height: 300px;
+}
+
 .fab-btn {
     position: relative;
     margin-top: 1rem;
@@ -26,56 +97,57 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #0d6efd;
-    color: #fff;
+    background-color: var(--accent-colorBright);
+    color: var(--Text-dark);
     border: none;
     cursor: pointer;
     font-size: 1.5rem;
     line-height: 1;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
+
 .fab-btn:hover {
-    background-color: #0b5ed7;
+    background-color: var(--accent-colorDark);
 }
+
 .timeline {
     width: 4px;
-    height: 100%;
-    background-color: #0d6efd;
+    height: calc(100% + 2rem);
+    background-color: var(--accent-colorBright);
     margin-left: 15px;
 }
+
 .timeline .year-box {
     margin-left: 20px;
-    background-color: #f8f9fa;
-    color: black;
+    color: var(--accent-colorDark);
     padding: 0.5rem 1rem;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     display: flex;
     align-items: center;
-    flex: 1; /* Makes the year-box take available space */
-    width: 10rem; /* Ensures it adjusts dynamically */
+    flex: 1;
+    width: 10rem;
     min-width: 25%;
+    border-radius: 5%;
 }
 
 .timeline .year-box > * {
-    margin: auto; /* Resets any default margin for <p> or text elements */
+    margin: auto;
 }
 
 .card-wrapper {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    box-shadow: black;
-}
-.card {
-    flex: 0 0 85%;
-    box-shadow: 5px 5px 5px rgb(21, 21, 21);
+    margin-bottom: 2rem;
 }
 
+.view-site-btn {
+    display: none;
+    margin-top: 1rem;
+}
 
-.card-content {
-    max-height: 100px;
-    overflow: hidden;
-    transition: max-height 1s ease-in-out;
+.card.expanded .view-site-btn {
+    display: block;
 }
 
 .card-img-top {
@@ -85,109 +157,19 @@
     object-fit: cover;
     object-position: top;
 }
-.card.expanded .card-content {
-    max-height: 1000px;
-}
-.hidden-paragraph {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 1s ease-in-out;
-}
-.card.expanded .hidden-paragraph {
-    max-height: 300px; /* Adjust based on your expected content size */
-}
 
-.fab-btn {
-    position: relative;
-    margin-top: 1rem;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #0d6efd;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-    font-size: 1.5rem;
-    line-height: 1;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-}
-.fab-btn:hover {
-    background-color: #0b5ed7;
-}
-.card-wrapper {
-    margin-bottom: 2rem;
-}
-.view-site-btn {
-    display: none;
-    margin-top: 1rem;
-}
-.card.expanded .view-site-btn {
-    display: block;
-}
+@media (max-width: 760px) {
+    html {
+        scrollbar-gutter: auto;
+    }
 
+    .timeline, .year-box {
+        display: none;
+    }
 
-.card-content {
-    max-height: 100px;
-    overflow: hidden;
-    transition: max-height 1s ease-in-out;
-}
-
-.card.expanded .card-content {
-    max-height: 1000px;
-    transition: max-height 1s ease-in-out;
-}
-
-.hidden-paragraph {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 1s ease-in-out;
-}
-
-.card.expanded .hidden-paragraph {
-    max-height: 300px; /* Adjust based on your expected content size */
-}
-
-.fab-btn {
-    position: relative;
-    margin-top: 1rem;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #0d6efd;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-    font-size: 1.5rem;
-    line-height: 1;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-}
-
-.fab-btn:hover {
-    background-color: #0b5ed7;
-}
-
-.card-wrapper {
-    margin-bottom: 2rem;
-}
-
-.view-site-btn {
-    display: none;
-    margin-top: 1rem;
-}
-
-.card.expanded .view-site-btn {
-    display: block;
-}
-
-.card-img-top {
-    object-fit: cover;
-    object-position: top; /* Ensures the image is aligned to the top */
-    max-height: 200px; /* Optional: Limit the height of the image */
-    width: 100%; /* Ensures the image fits the card width */
+    .container.mt-4.left,
+    div.card.mb-4 {
+        max-width: 100%;
+        margin-left: 2%;
+    }
 }
