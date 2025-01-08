@@ -70,7 +70,11 @@
                     </div>
                 </div>
                 <div class="timeline">
-                    <div class="year-box"><p><strong>2024</strong></p></div>
+                    <div class="year-box">
+                        <div class="logo">
+                            <img src="/img/Collins_Aerospace_Logo.png" alt="Collins Logo">
+                        </div>
+                        <p><strong>2024</strong></p></div>
                 </div>
             </div>
             <!-- Panel 2 with Timeline -->
@@ -91,6 +95,9 @@
                 </div>
                 <div class="timeline">
                     <div class="year-box">
+                        <div class="logo">
+                            <img src="/img/Collins_Aerospace_Logo.png" alt="Collins Logo">
+                        </div>
                         <p><strong>2023</strong>
                         </p>
                     </div>
@@ -117,6 +124,9 @@
                 </div>
                 <div class="timeline">
                     <div class="year-box">
+                        <div class="logo">
+                            <img src="/img/Collins_Aerospace_Logo.png" alt="Collins Logo">
+                        </div>
                         <p><strong>December 2022</strong>
                         Promoted to Sr. Product Support Engineer</p>
                         </p>
@@ -142,9 +152,14 @@
                 </div>
                 <div class="timeline">
                     <div class="year-box">
+                        <div class="logo">
+                            <img src="/img/Collins_Aerospace_Logo.png" alt="Collins Logo">
+                        </div>
                         <p><strong>January 2021</strong>
-                        Collins Aerospace Product Support Engineer</p>
+                        Collins Aerospace Product Support Engineer
                         </p>
+
+                        
                     </div>
                 </div>
             </div>
@@ -157,13 +172,18 @@
                         <ul>
                             <li>Support American Airlines 777 Galley MOD in Melbourne, Florida</li>
                             <li>Remote support for A320F Heavy Check lines in San Salvador, El Salvador</li>
+                            <li>Support Charlotte Line maintenance</li>
                         </ul> 
                         </div>
-                        <button class="fab-btn toggle-btn"><i class="fa-regular fa-circle-down"></i></button>
+                        <button class="fab-btn toggle-btn" id="3bullet_1"><i class="fa-regular fa-circle-down"></i></button>
                     </div>
                 </div>
-                <div class="timeline">
-                    <div class="year-box"><strong>2020</strong></div>
+                <div class="timeline" id="American">
+                    <div class="year-box">
+                        <div class="logo">
+                            <img src="/img/AA.png" alt="AA Logo">
+                        </div>
+                        <strong>2020</strong></div>
                 </div>
             </div>
             <!-- Panel 6 -->
@@ -178,16 +198,53 @@
                                 <li>Led Research for development of autonomous drone inspection program</li>
                             </ul>
                         </div>
-                        <button class="fab-btn toggle-btn"><i class="fa-regular fa-circle-down"></i></button>
+                        <button class="fab-btn toggle-btn" id="3bullet_2"><i class="fa-regular fa-circle-down"></i></button>
                     </div>
                 </div>
-                <div class="timeline">
+                <div class="timeline" id="American">
+
                     <div class="year-box">
+                        <div class="logo">
+                            <img src="/img/AA.png" alt="AA Logo">
+                        </div>
                         <p><strong>March 2019</strong>
-                        American Airlines Base Support Engineer</p>
+                        </p>
                     </div>
+
                 </div>
             </div>
+
+            <!-- Panel 7 -->
+            <div class="card-wrapper">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title"><h2>2018</h2>
+                        <div class="card-content">
+                            <ul>
+                                <li>Site Engineer for E190 Heavy Checks in San Antonio, TX</li>
+                                <li>Site Engineer for Oasis 737 Interior modification in Greensboro, NC </li>
+                                <li>Engineer Lead for Hail and Lightning Strike (HSL) program development</li>
+                            </ul>
+                        </div>
+                        <button class="fab-btn toggle-btn" id="3bullet_3"><i class="fa-regular fa-circle-down"></i></button>
+                    </div>
+                </div>
+                <div class="timeline" id="American">
+
+                    <div class="year-box">
+                        <div class="logo">
+                            <img src="/img/AA.png" alt="AA Logo">
+                        </div>
+                        <p><strong>March 2018</strong>
+                        American Airlines Base Support Engineer
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+            <!--- Close Panel-->
+
+
         </div>
     </div>
 
@@ -199,15 +256,59 @@
     <!-- Bootstrap JS Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-document.querySelectorAll('.toggle-btn').forEach(button => {
-    button.addEventListener('click', () => {
-        const card = button.closest('.card');
-        card.classList.toggle('expanded');
-        button.innerHTML = card.classList.contains('expanded') 
-            ? '<i class="fa-regular fa-circle-up"></i>' 
-            : '<i class="fa-regular fa-circle-down"></i>';
-    });
-});
+        document.querySelectorAll('.toggle-btn').forEach(button => {
+            button.addEventListener('click', () => {
+                const card = button.closest('.card');
+                card.classList.toggle('expanded');
+                button.innerHTML = card.classList.contains('expanded') 
+                    ? '<i class="fa-regular fa-circle-up"></i>' 
+                    : '<i class="fa-regular fa-circle-down"></i>';
+            });
+        });
+
+        function updateButtonState() {
+        const button1 = document.getElementById("3bullet_1");
+        const icon1 = button1.querySelector("i");
+            if (window.innerWidth > 970) {
+                button1.disabled = true; // Disable the button
+                button1.style.cursor = "default"; // Optional: Change cursor
+                icon1.style.display = "none"// = "fa-solid fa-minus" // Change icon to "ban"
+            } else {
+                button1.disabled = false; // Enable the button
+                icon1.style.display ="inline-block"
+                button1.style.cursor = "pointer"; // Optional: Change cursor
+            }
+
+        const button2 = document.getElementById("3bullet_2");
+        const icon2 = button2.querySelector("i");
+            if (window.innerWidth > 970) {
+                button2.disabled = true; // Disable the button
+                button2.style.cursor = "default"; // Optional: Change cursor
+                icon2.style.display = "none"// = "fa-solid fa-minus" // Change icon to "ban"
+            } else {
+                button2.disabled = false; // Enable the button
+                icon2.style.display ="inline-block"
+                button2.style.cursor = "pointer"; // Optional: Change cursor
+            }
+
+        const button3 = document.getElementById("3bullet_3");
+        const icon3 = button3.querySelector("i");
+            if (window.innerWidth > 970) {
+                button3.disabled = true; // Disable the button
+                button3.style.cursor = "default"; // Optional: Change cursor
+                icon3.style.display = "none"// = "fa-solid fa-minus" // Change icon to "ban"
+            } else {
+                button3.disabled = false; // Enable the button
+                icon3.style.display ="inline-block"
+                button3.style.cursor = "pointer"; // Optional: Change cursor
+            }
+        }
+
+    // Call on window resize
+    window.addEventListener("resize", updateButtonState);
+
+    // Call on page load
+    updateButtonState();
 
 
     </script>
