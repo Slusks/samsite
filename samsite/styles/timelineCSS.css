@@ -38,6 +38,9 @@ footer {
 .navbar {
   background-color: var(--primary-color);
   color: var(--Text-Light);
+  border-bottom-color: black;
+  border-bottom-width:2px;
+  border-bottom-style:solid;
 }
 
 .navbar-brand,
@@ -47,8 +50,9 @@ a.nav-link {
 }
 
 .container-intro {
-  padding: 3%;
+  padding: 2% 2% 1% 2%;
   background-color: var(--secondary-color);
+  margin-bottom: 1%;
 }
 
 .container.mt-4.left {
