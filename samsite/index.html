@@ -53,6 +53,27 @@
     <!-- Main Content -->
     <div class="container mt-4 left">
         <div class="row">
+             <!-- Panel A with Timeline -->
+             <div class="card-wrapper">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h2 class="card-title">2025</h2>
+                        <div class="card-content">
+                            <ul>
+                                <li>Executed Skydrol quality verification after biannual system maintenance.</li>
+                             </ul>
+                        </div>
+                        <button class="fab-btn toggle-btn" disabled ><i class="fa-solid fa-arrows-rotate"></i></button>
+                    </div>
+                </div>
+                <div class="timeline">
+                    <div class="year-box">
+                        <div class="logo">
+                            <img src="/img/Collins_Aerospace_Logo.png" alt="Collins Logo">
+                        </div>
+                        <p><strong>2025</strong></p></div>
+                </div>
+            </div>
             <!-- Panel 1 with Timeline -->
             <div class="card-wrapper">
                 <div class="card mb-4">
@@ -175,7 +196,7 @@
                             <li>Support Charlotte Line maintenance</li>
                         </ul> 
                         </div>
-                        <button class="fab-btn toggle-btn" id="3bullet_1"><i class="fa-regular fa-circle-down"></i></button>
+                        <button class="fab-btn toggle-btn" id="3bullet_1"  style="background-color:hsl(206, 100%, 41%);"><i class="fa-regular fa-circle-down"></i></button>
                     </div>
                 </div>
                 <div class="timeline" id="American">
@@ -198,7 +219,7 @@
                                 <li>Led Research for development of autonomous drone inspection program</li>
                             </ul>
                         </div>
-                        <button class="fab-btn toggle-btn" id="3bullet_2"><i class="fa-regular fa-circle-down"></i></button>
+                        <button class="fab-btn toggle-btn" id="3bullet_2"  style="background-color:hsl(206, 100%, 41%);"><i class="fa-regular fa-circle-down"></i></button>
                     </div>
                 </div>
                 <div class="timeline" id="American">
@@ -226,7 +247,7 @@
                                 <li>Engineer Lead for Hail and Lightning Strike (HSL) program development</li>
                             </ul>
                         </div>
-                        <button class="fab-btn toggle-btn" id="3bullet_3"><i class="fa-regular fa-circle-down"></i></button>
+                        <button class="fab-btn toggle-btn" id="3bullet_3"  style="background-color:hsl(206, 100%, 41%);"><i class="fa-regular fa-circle-down"></i></button>
                     </div>
                 </div>
                 <div class="timeline" id="American">
@@ -309,6 +330,39 @@
 
     // Call on page load
     updateButtonState();
+
+
+
+    document.addEventListener("DOMContentLoaded", () => {
+        const header = document.querySelector("nav.navbar"); // Select the navbar (header)
+        const footer = document.querySelector("footer"); // Select the footer
+        let isHeaderVisible = true; // Track header visibility
+        let isFooterVisible = false; // Track footer visibility
+
+        // Intersection Observer to check visibility of header and footer
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.target === header) {
+                    isHeaderVisible = entry.isIntersecting;
+                }
+                if (entry.target === footer) {
+                    isFooterVisible = entry.isIntersecting;
+                }
+
+                // Change footer color based on visibility condition
+                if (!isHeaderVisible && isFooterVisible) {
+                    footer.style.backgroundColor = "hsl(206, 100%, 41%)"; // Blue when header is NOT visible
+                } else {
+                    footer.style.backgroundColor = "hsl(9,98%,24%)"; // Red when header IS visible
+                }
+            });
+        }, { threshold: 0.1 }); // Adjust threshold to detect small visibility changes
+
+        // Observe both header and footer
+        observer.observe(header);
+        observer.observe(footer);
+    });
+
 
 
     </script>
